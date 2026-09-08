@@ -3,8 +3,8 @@ import requests
 url = "https://ieeerecruitment.shivzee.in/api/v1/auth/login"
 
 data = {
-    "email": "sanjitarya.s2026@vitstudent.ac.in",
-    "password": "Greatboy7!"
+    "email": "placeholder",
+    "password": "placeholder"
 }
 
 response = requests.post(url, json=data)
