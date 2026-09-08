@@ -53,4 +53,22 @@ response = requests.patch(save_url, json=body, headers=headers)
 print(response.status_code)
 print(response.text)
 
+response = requests.patch(save_url, json=body, headers=headers)
+print(response.status_code)
+print(response.text)
+
+if response.status_code == 200:
+    submit_url = f"https://ieeerecruitment.shivzee.in/api/v1/applications/918e372f-05cf-4503-acf0-87e50c8098ab/submit"
+    
+    submit_response = requests.post(submit_url, headers=headers)
+    print(submit_response.status_code)
+    print(submit_response.text)
+    
+    if submit_response.status_code == 200:
+        print("Application submitted successfully")
+    else:
+        print("Submit failed")
+else:
+    print("Save failed")
+
 
